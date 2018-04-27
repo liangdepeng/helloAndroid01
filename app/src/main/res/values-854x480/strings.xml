@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_spring">SpringActivity</string>
+    <!-- first activity -->
+    <string name="calendar_button">日历按钮</string>
+    <string name="setting_button">设置按钮</string>
+    <string name="calendar">17</string>
+    <string name="detail">详情</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <!-- setting Activity -->
+    <string name="setting">设置</string>
+    <string name="setting_back">设置界面的返回按钮</string>
+    <string name="arrow">箭头</string>
+    <string name="check_update">检查更新</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about">关于</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+	<!-- select detail -->
+	<string name="sl_back_button">返回按钮</string>
+	<string name="sl_share_button">分享按钮</string>
+	<string name="label_img">标志性图片</string>
+	<string name="exhibition_detail">展览详情</string>
+	<string name="text_test_info"></string>
+	<!-- setting about activity -->
+	<string name="setting_about">你，本来就是艺术家</string>
+	<string name="version_info">版本信息：1.0.1版</string>
+	<string name="company_info">杭州木羊文化科技有限公司</string>
+	<string name="logo_info">公司logo</string>
+	    <string name="sel_date">Selected date: %s</string>
+	<string name="see_detail">查看详情></string>
+	
+	<!-- mine fragment -->
+	<string name="concern">关注</string>
+	<string name="funs">粉丝</string>
+	<string name="album">相册</string>
+	<string name="new_blog">新建日志</string>
+	<string name="blog_null">快来记录自己的艺术心情吧！</string>
+	<string name="comments_null">快去对你关注的艺术作品说点啥吧！</string>
+	<string name="collect_null">快去收藏你喜爱的艺术作品吧 ！</string>
+	<!-- mine change info -->
+	<string name="base_info">基本信息</string>
+	<string name="sex">性别</string>
+	<string name="meal">男</string>
+	<string name="femeal">女</string>
+	<string name="secret">保密</string>
+	<string name="signature">个性签名</string>
+	<string name="nickname">昵称</string>
+	<string name="set_nickname">编辑昵称</string>
+	<string name="sure">确定</string>
+	<string name="cancle">取消</string>
+	<string name="set_signatrue">编辑个人签名</string>
+	
+	<!-- upload picture -->
+	<string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string> 
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    
+    <string name="exit">退出当前帐号</string>
+    <string name="collect_info">人已收藏</string>
+    <string name="praise_info">人觉得很赞</string>
+    
+    <string name="album_null">相册空空!</string>
+    <string name="concern_null">赶紧去找朋友关注吧！</string>
+    
+    <string name="justheight">218</string>
+    <string name="gallery_item_width">180</string>
+	<string name="gallery_item_height">240</string>
+	<string name="gallery_item_ch_width">210</string>
+    <string name="gallery_item_ch_height">280</string>
+    
+    <string name="artreactor_item_height">300</string>
+	<string name="artreactor_item_width">210</string>
+</resources>

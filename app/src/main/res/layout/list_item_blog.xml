@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/blog_liner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <cc.pachira.widget.CircleImageView
+            android:id="@+id/comments_user_photo"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="13.5dp" >
+        </cc.pachira.widget.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="16.5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/comment_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/user_name_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/comment_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/brief_title"
+                android:textSize="14sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/image_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:scrollbarAlwaysDrawHorizontalTrack="false"
+                android:scrollbars="none"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <cc.pachira.widget.NoScrollGridView
+                        android:id="@+id/image_grid_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="90dp"
+                        android:listSelector="#00000000"
+                        android:numColumns="auto_fit" >
+                    </cc.pachira.widget.NoScrollGridView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp" >
+
+                <TextView
+                    android:id="@+id/publish_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="24分钟前"
+                    android:textColor="@color/brief_title"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/delete_blog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/comments_praise"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/prise_normal" />
+
+                    <TextView
+                        android:id="@+id/prise_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="删除该日志"
+                        android:textColor="@color/brief_title"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

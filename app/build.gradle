@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.example.zhengjun.helloandroid"
+        minSdkVersion 14
+        targetSdkVersion 17
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'test'
+            keyPassword '123321'
+            storeFile file('./test.jks')
+            storePassword '123321'
+        }
+        config {
+            keyAlias 'test'
+            keyPassword '123321'
+            storeFile file('./test.jks')
+            storePassword '123321'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile files('libs/libammsdk.jar')
+}

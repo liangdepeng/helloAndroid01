@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/login_pop"
+    android:clickable="true"
+    >
+    <LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@null"
+	    android:id="@+id/first_lay"
+	    android:orientation="vertical"
+	    ></LinearLayout>
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/res_lay"
+	    android:background="#bc000000"
+	    >
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_centerInParent="true"
+	        android:gravity="center"
+	        android:id="@+id/login_frame"
+	         >
+	        <ImageView 
+	        android:layout_width="70dp"
+	        android:layout_height="70dp"
+	        android:src="@drawable/wechat"
+	        android:id="@+id/close"
+	        android:clickable="true"
+	        android:padding="10dp"
+	        />
+	        <Button
+	            android:layout_marginTop="40dp"
+	            android:layout_width="130dp"
+	            android:layout_height="40dp"
+	            android:text="微信登录"
+	            android:background="@color/login_button_back"
+	            android:textColor="@color/login_text_color"
+	            android:id="@+id/login"
+	            ></Button>
+	    </LinearLayout>
+	  
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/wechat_login_close"
+	            android:layout_above="@id/login_frame"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginBottom="89dp"
+	            android:layout_marginRight="52dp"
+	            android:id="@+id/close_wechat_login"
+	            android:clickable="true"
+	            />
+	    
+	</RelativeLayout>
+	
+</FrameLayout>

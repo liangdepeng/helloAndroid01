@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CoverFlow">
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
+        <attr name="withReflection" format="boolean" />
+        <attr name="reflectionGap" format="dimension" />
+        <attr name="imageReflectionRatio" format="float" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <attr name="src" format="reference"></attr>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+        <attr name="src" />
+    </declare-styleable>
+    <declare-styleable name="HelloGallery" styleable="">
+        <attr name="android:galleryItemBackground"></attr>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:orientation="horizontal" 
+    android:id="@+id/header"
+    android:background="@drawable/home_title_background"
+    >
+    <Button
+        android:layout_alignParentLeft="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/calendar_toolbar"
+        android:id="@+id/canlendar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:text="@string/calendar"
+        android:textColor="@color/white"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:contentDescription="@string/calendar_button"
+        ></Button>
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/app_name"
+	    android:textSize="17dp"
+	    android:textColor="@color/white"
+	    android:layout_centerInParent="true"
+	    android:id="@+id/title"
+	    />
+
+	<ImageView
+	    android:layout_centerVertical="true"
+	    android:layout_width="20dp"
+	    android:layout_height="20dp"
+	    android:src="@drawable/setting_toolbar"
+	    android:layout_alignParentRight="true"
+	    android:background="@null"
+	    android:id="@+id/setting"
+	    android:contentDescription="@string/setting_button"
+	    android:layout_marginRight="16dp"
+	    android:clickable="true"
+	     />
+
+</RelativeLayout>

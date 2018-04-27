@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true">
+
+    <WebView
+        android:id="@+id/detail_window"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="@drawable/header_background_detail" >
+
+        <LinearLayout
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:layout_width="52dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="back"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/back_topbar"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/tab_text_active_color"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:ellipsize="end"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/share"
+            android:layout_width="52dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:onClick="share"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/share_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/share_topbar"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/header_line"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/line_color"
+            android:layout_height="0.1dp"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

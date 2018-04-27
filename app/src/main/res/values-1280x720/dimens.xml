@@ -1,0 +1,26 @@
+<resources>
+
+    <!--
+         Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
+    -->
+     <dimen name="ap_base_menu_shadow_offset">80dp</dimen>
+    <dimen name="ap_base_menu_shadow_width">16dp</dimen>
+    <dimen name="tab_top_fontsize">17sp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="ui_10_dip">10dip</dimen> 
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+	<dimen name="festival_list_title">17sp</dimen>
+	<dimen name="select_flow_textSize">15sp</dimen>
+	<dimen name="festival_list_vertical">11dp</dimen>
+	<dimen name="width">720dp</dimen>
+	<dimen name="height">1280dp</dimen>
+	<dimen name="festival_collect_height">22dp</dimen>
+	
+	<dimen name="gallery_height">256dp</dimen>
+	<dimen name="gallery_item_width">150dp</dimen>
+	<dimen name="gallery_item_height">225dp</dimen>
+	<dimen name="gallery_item_ch_width">173dp</dimen>
+	<dimen name="gallery_item_ch_height">260dp</dimen>
+</resources>
