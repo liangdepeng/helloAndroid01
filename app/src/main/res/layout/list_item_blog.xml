@@ -19,12 +19,12 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
-        <cc.pachira.widget.CircleImageView
+        <com.example.zhengjun.helloandroid.view.CircleImageView
             android:id="@+id/comments_user_photo"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_marginLeft="13.5dp" >
-        </cc.pachira.widget.CircleImageView>
+        </com.example.zhengjun.helloandroid.view.CircleImageView>
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -62,13 +62,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" >
 
-                    <cc.pachira.widget.NoScrollGridView
+                    <com.example.zhengjun.helloandroid.view.NoScrollGridView
                         android:id="@+id/image_grid_view"
                         android:layout_width="fill_parent"
                         android:layout_height="90dp"
                         android:listSelector="#00000000"
                         android:numColumns="auto_fit" >
-                    </cc.pachira.widget.NoScrollGridView>
+                    </com.example.zhengjun.helloandroid.view.NoScrollGridView>
                 </LinearLayout>
             </HorizontalScrollView>
 

@@ -34,6 +34,15 @@
             android:screenOrientation="portrait">
         </activity>
 
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".ChoosePictureActivity" />
+        <activity android:name=".BlogDetailActivity" />
+        <activity
+            android:name="com.example.localalbum.ui.LocalAlbum"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.localalbum.ui.LocalAlbumDetail" />
+
         <activity android:name=".SelectedDetailActivity" />
         <activity android:name=".ChangeMineInfoActivity" />
         <activity

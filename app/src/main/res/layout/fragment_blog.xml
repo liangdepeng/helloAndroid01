@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/new_blog" >
 
-        <cc.pachira.widget.NoScrollGridView
+        <com.example.zhengjun.helloandroid.view.NoScrollGridView
             android:id="@+id/fragment_blog_list"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

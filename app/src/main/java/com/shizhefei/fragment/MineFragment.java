@@ -1,18 +1,24 @@
 package com.shizhefei.fragment;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +36,10 @@ import com.example.zhengjun.helloandroid.view.CircleImageView;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.shizhefei.view.indicator.Indicator;
+import com.shizhefei.view.indicator.IndicatorViewPager;
+import com.shizhefei.view.indicator.slidebar.ColorBar;
+import com.shizhefei.view.indicator.transition.OnTransitionTextListener;
 
 import org.apache.http.Header;
 import org.json.JSONException;
@@ -43,7 +53,7 @@ import java.net.URLDecoder;
 
 public class MineFragment extends LazyFragment{
 
-
+	public static ViewPager viewPager;
 	private ACache mACache;
 	private TextView title;
 	private ImageView left_button;
@@ -59,6 +69,105 @@ public class MineFragment extends LazyFragment{
 	private String sex = "";
 	private String nickname = "";
 	private String sign = "";
+
+	public void initViewPager(){
+		viewPager= (ViewPager) findViewById(R.id.fragment_mine_viewPager);
+		Indicator indicator = (Indicator) findViewById(R.id.fragment_mine_indicator);
+		indicator.setScrollBar(new ColorBar(getApplicationContext(),
+				getResources().getColor(R.color.pink), 5));
+		Resources res = getResources();
+		int selectColor = res.getColor(R.color.pink);
+		int unSelectColor = res.getColor(R.color.tab_top_text_1);
+		indicator.setOnTransitionListener(new OnTransitionTextListener()
+				.setColor(selectColor, unSelectColor).setSize(17, 17));
+		viewPager.setOffscreenPageLimit(4);
+		IndicatorViewPager indicatorViewPager = new IndicatorViewPager(indicator, viewPager);
+//  注意这里 的 FragmentManager  是 getChildFragmentManager();  因为是在 Fragment 里面
+//  而在 activity 里面用 FragmentManager  是 getSupportFragmentManager()
+		indicatorViewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
+	}
+	private class MyAdapter extends IndicatorViewPager.IndicatorFragmentPagerAdapter {
+		public MyAdapter(FragmentManager fragmentManager) {
+			super(fragmentManager);
+		}
+		@Override
+		public int getCount() {
+			return 3;
+		}
+		@Override
+		public View getViewForTab(int position, View convertView,
+								  ViewGroup container) {
+			LayoutInflater inflate = LayoutInflater.from(getApplicationContext());
+			switch (position) {
+				case 0:
+					if (convertView == null) {
+						convertView = inflate.inflate(R.layout.tab_top, container, false);
+					}
+					TextView blog = (TextView) convertView;
+					blog.setText(" 日志");
+					break;
+				case 1:
+					if (convertView == null) {
+						convertView = inflate.inflate(R.layout.tab_top, container, false);
+					}
+					TextView comments = (TextView) convertView;
+					comments.setText(" 评论");
+					break;
+				case 2:
+					if (convertView == null) {
+						convertView = inflate.inflate(R.layout.tab_top, container, false);
+					}
+					TextView collections = (TextView) convertView;
+					collections.setText(" 收藏");
+					break;
+				default:
+					break;
+			}
+			return convertView;
+		}
+		@Override
+		public Fragment getFragmentForPage(int position) {
+			Fragment fragment = null;
+			switch (position) {
+				case 0:
+					BlogFragment blogFragment = new BlogFragment();
+					fragment = blogFragment;
+					break;
+				case 1:
+					CommentFragment commentsFragment = new CommentFragment();
+					fragment = commentsFragment;
+					break;
+				case 2:
+					CollectionFragment collectionFragment = new CollectionFragment();
+					fragment = collectionFragment;
+					break;
+				default:
+					break;
+			}
+			return fragment;
+		}
+	}
+
+	public static void resetViewPagerHeight(int position) {
+		if(viewPager == null) {
+			return;
+		}
+		View child = viewPager.getChildAt(position);
+		if (child != null) {
+			child.measure(0, 0);
+			int h = child.getMeasuredHeight();
+			LinearLayout.LayoutParams params = (android.widget.LinearLayout.LayoutParams)
+					viewPager.getLayoutParams();
+			params.height = h;
+			viewPager.setLayoutParams(params);
+		}
+	}
+
+
+
+
+
+
 	public void change_photo(){
 		final PopupWindow pop = new PopupWindow(getActivity());
 		View view = getActivity().getLayoutInflater().inflate(R.layout.item_popupwindows,
@@ -229,6 +338,7 @@ public class MineFragment extends LazyFragment{
 
 		setContentView(R.layout.fragment_mine);
 		init();
+		initViewPager();
 	}
 
 	@Override

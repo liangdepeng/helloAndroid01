@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
         android:background="@color/line_color" />
-	<cc.pachira.widget.NoScrollGridView
+	<com.example.zhengjun.helloandroid.view.NoScrollGridView
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:id="@+id/comment_list"

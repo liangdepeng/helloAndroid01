@@ -59,12 +59,12 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal" >
 
-        <cc.pachira.widget.CircleImageView
+        <com.example.zhengjun.helloandroid.view.CircleImageView
             android:id="@+id/blog_user_image"
             android:layout_width="46dp"
             android:layout_height="46dp"
             android:layout_marginLeft="13.5dp" >
-        </cc.pachira.widget.CircleImageView>
+        </com.example.zhengjun.helloandroid.view.CircleImageView>
 
         <LinearLayout
             android:layout_width="fill_parent"

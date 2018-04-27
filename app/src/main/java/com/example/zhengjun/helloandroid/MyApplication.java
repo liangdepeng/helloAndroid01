@@ -3,6 +3,7 @@ package com.example.zhengjun.helloandroid;
 import android.app.Application;
 import android.graphics.Bitmap;
 
+import com.example.localalbum.common.LocalImageHelper;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiskCache;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -66,6 +67,19 @@ public class MyApplication extends Application {
 				.writeDebugLogs() // Remove for releaseapp
 				.build();
 		ImageLoader.getInstance().init(imageLoaderConfiguration);
+
+		LocalImageHelper.init(instance);
+	}
+	public String getCachePath() {
+		File cacheDir;
+		if
+				(android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED))
+			cacheDir = getExternalCacheDir();
+		else
+			cacheDir = getCacheDir();
+		if (!cacheDir.exists())
+			cacheDir.mkdirs();
+		return cacheDir.getAbsolutePath();
 	}
 
 
