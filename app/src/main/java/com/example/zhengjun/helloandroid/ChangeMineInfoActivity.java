@@ -51,7 +51,7 @@ public class ChangeMineInfoActivity extends Activity implements View.OnClickList
         sex = (TextView)findViewById(R.id.sex);
         signature=(TextView)findViewById(R.id.signature);
         set_nickname = (RelativeLayout)findViewById(R.id.set_nickname);
-        set_sex = (RelativeLayout )findViewById(R.id.set_sex);
+        set_sex = (RelativeLayout)findViewById(R.id.set_sex);
         set_signature = (RelativeLayout)findViewById(R.id.set_signature);
         set_nickname.setOnClickListener(this);
         set_sex.setOnClickListener(this);
@@ -66,7 +66,6 @@ public class ChangeMineInfoActivity extends Activity implements View.OnClickList
         }
         nickname.setText(getIntent().getExtras().getString("nickname"));
         signature.setText(getIntent().getExtras().getString("sign"));
-        signature.setText("");
         selectsex = new SelectSexPopwindow(ChangeMineInfoActivity.this, new
                 SelectSexPopwindow.PopwindowListener() {
                     @Override
@@ -104,13 +103,14 @@ public class ChangeMineInfoActivity extends Activity implements View.OnClickList
             case R.id.set_signature:
 //实现修改个性签名功能
 
-                MyDialog myDialog2 = new MyDialog(this, "编辑个性签名", new MyDialog.OnCustomDialogListener() {
+                MyDialog myDialog2 = new MyDialog(this, "编辑个性签名",
+                        new MyDialog.OnCustomDialogListener() {
                     @Override
                     public void back(String sign) {
-                        if(signature.length()>0&&!signature.equals("null")){
+                        if(sign.length()>0&&!sign.equals("null")){
                             signature.setText(sign);
                         }
-                        sendData("signature",sign);
+                        sendData("sign",sign);
                     }
                 });
                 myDialog2.show();
