@@ -733,7 +733,16 @@ containing a value of this type.
     }
     public static final class style {
         public static final int AlertDialogStyle=0x7f070000;
+        /** 
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        
+         */
         public static final int AppBaseTheme=0x7f070001;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f070002;
         public static final int CalendarCard=0x7f070003;
         public static final int CalendarCard_Day=0x7f070004;
@@ -744,6 +753,8 @@ containing a value of this type.
         public static final int dividing_line_style=0x7f070009;
         public static final int listViewMultiImageView=0x7f07000a;
         public static final int progress_dialog=0x7f07000b;
+        /**  模糊 
+         */
         public static final int show_picpopupwindow=0x7f07000c;
     }
     public static final class styleable {
