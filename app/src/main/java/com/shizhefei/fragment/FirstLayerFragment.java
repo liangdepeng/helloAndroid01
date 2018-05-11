@@ -1,5 +1,6 @@
 package com.shizhefei.fragment;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.zhengjun.helloandroid.MerchantLocationActivity;
 import com.example.zhengjun.helloandroid.R;
 import com.shizhefei.view.indicator.Indicator;
 import com.shizhefei.view.indicator.IndicatorViewPager;
@@ -38,6 +40,19 @@ public class FirstLayerFragment extends LazyFragment {
 		title = (TextView) findViewById(R.id.title);
 		title.setText("嬉戏测试版");
 		right_img = (ImageView) findViewById(R.id.setting);
+		right_img.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent map = new Intent(getActivity(), MerchantLocationActivity.class);
+				map.putExtra("mer_lat","302733420");
+				map.putExtra("mer_long","1200936550");
+				map.putExtra("mer_name","酒仙");
+				startActivity(map);
+			}
+		});
+
+
+
 		left_button = (Button) findViewById(R.id.canlendar);
 		left_button.setText(String.valueOf(new Date().getDate()));
 		ViewPager viewPager = (ViewPager) findViewById(R.id.fragment_tabmain_viewPager);

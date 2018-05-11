@@ -42,4 +42,5 @@ dependencies {
     compile 'com.android.support:support-v4:18.0.0'
     compile files('libs/universal-image-loader-1.9.5.jar')
     compile files('libs/libammsdk.jar')
+    compile files('libs/BaiduLBS_Android.jar')
 }
